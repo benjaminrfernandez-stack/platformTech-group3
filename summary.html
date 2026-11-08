@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grade Calculator - Summary</title>
+  <link rel="icon" href="../logo/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html"><img src="../logo/logo.svg" alt="Logo"> Student Grade Calculator</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="summary.html" class="active">Summary</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="message" class="message hidden"></div>
+
+    <section class="card">
+      <h2>Grade Summary</h2>
+      <div class="row">
+        <div class="field">
+          <label for="searchInput">Search</label>
+          <input type="text" id="searchInput" placeholder="Name or subject">
+        </div>
+        <div class="field">
+          <label for="filterRemarks">Filter by remarks</label>
+          <select id="filterRemarks">
+            <option value="all">All</option>
+            <option>Excellent</option>
+            <option>Superior</option>
+            <option>Very Good</option>
+            <option>Good</option>
+            <option>Satisfactory</option>
+            <option>Passed</option>
+            <option>Failed</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Subject</th><th>Final Grade</th><th>Equivalent</th><th>Remarks</th><th>Action</th></tr>
+          </thead>
+          <tbody id="summaryBody"></tbody>
+        </table>
+      </div>
+      <p class="info" id="summaryInfo"></p>
+      <button type="button" class="btn btn-danger" id="clearAllBtn">Clear All</button>
+    </section>
+  </main>
+
+  <footer>Platform Technologies Group Project</footer>
+  <script src="../Javascript/script.js"></script>
+</body>
+</html>

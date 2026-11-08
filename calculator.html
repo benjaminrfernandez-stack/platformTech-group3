@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grade Calculator - Calculator</title>
+  <link rel="icon" href="../logo/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html"><img src="../logo/logo.svg" alt="Logo"> Student Grade Calculator</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html" class="active">Calculator</a>
+      <a href="summary.html">Summary</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="message" class="message hidden"></div>
+
+    <form id="gradeForm" novalidate>
+      <section class="card">
+        <h2>Student</h2>
+        <div class="row">
+          <div class="field">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="e.g. Juan Dela Cruz">
+            <span class="error" id="err-studentName"></span>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="e.g. Mathematics">
+            <span class="error" id="err-subject"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Grade Components</h2>
+        <p class="hint">Set the weight of each component (they must add up to 100%), then add every score with its number of items. Example: 4 quizzes with 15 items each means 4 quiz rows, each "out of 15".</p>
+        <p class="weight-total" id="weightTotal"></p>
+        <div id="components"></div>
+        <span class="error" id="err-weights"></span>
+        <button type="submit" class="btn">Calculate</button>
+        <button type="button" class="btn btn-light" id="resetBtn">Clear</button>
+      </section>
+    </form>
+
+    <section class="card hidden" id="result">
+      <h2 id="resultName"></h2>
+      <div class="result-grid">
+        <div><span class="big" id="resPercent"></span><span class="label">Final Grade</span></div>
+        <div><span class="big" id="resEquiv"></span><span class="label">Equivalent</span></div>
+        <div><span class="big" id="resRemarks"></span><span class="label">Remarks</span></div>
+      </div>
+      <button type="button" class="btn btn-light" id="toggleDetails">Show Computation</button>
+      <div id="detailsBox" class="hidden table-wrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>Component</th><th>Weight</th><th>Score</th><th>Percentage</th><th>Contribution</th></tr></thead>
+          <tbody id="detailsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>Platform Technologies Group Project</footer>
+  <script src="../Javascript/script.js"></script>
+</body>
+</html>

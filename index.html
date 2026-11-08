@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grade Calculator - Home</title>
+  <link rel="icon" href="../logo/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html"><img src="../logo/logo.svg" alt="Logo"> Student Grade Calculator</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="summary.html">Summary</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card hero">
+      <h2>Welcome!</h2>
+      <p>Enter a student's grades, calculate the final grade, see the remarks, and view the grade summary.</p>
+      <a class="btn" href="calculator.html">Start Calculating</a>
+      <a class="btn btn-light" href="summary.html">View Summary</a>
+    </section>
+
+    <section class="stats">
+      <div class="card stat"><span class="big" id="statTotal">0</span><span class="label">Total Students</span></div>
+      <div class="card stat"><span class="big passed" id="statPassed">0</span><span class="label">Passed</span></div>
+      <div class="card stat"><span class="big failed" id="statFailed">0</span><span class="label">Failed</span></div>
+      <div class="card stat"><span class="big" id="statAverage">--</span><span class="label">Average Grade</span></div>
+    </section>
+  </main>
+
+  <footer>Platform Technologies Group Project</footer>
+  <script src="../Javascript/script.js"></script>
+</body>
+</html>
